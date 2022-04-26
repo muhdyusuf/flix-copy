@@ -1,0 +1,45 @@
+.page{
+    background-color: var(--backgroundcolor);
+    border-bottom: .5rem var(--pageborder) solid;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+   text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: max-content;
+    
+
+}
+.answer{
+    display: none;
+}
+
+.pd1-xsmall{
+    padding: 1rem;
+}
+.pd-small{
+    padding: 2rem;
+}
+.pd-small-side{
+    padding: 0 2rem;
+}
+
+.margin1{
+    margin-bottom: 1rem ;
+}
+.margin2{
+    margin: 2rem;
+}
+.marginall1{
+    margin:1rem;
+}
+h1{
+  font-size: 1.7rem;  
+}
+h3{
+    font-size: 1.125rem;
+    font-weight: 400;
+
+}

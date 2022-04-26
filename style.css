@@ -1,0 +1,606 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: sans-serif;
+
+
+}
+:root{
+    --backgroundcolor:black;
+    --pageborder:#333;
+    --button-border:#aaa;
+    --font-color:white;
+    --button-color:#e50914;
+    --email-border:#ffa00a;
+    --email-font-color:#8c8c8c;
+}
+body{
+    background-color: var(--backgroundcolor);
+    font-family: Helvetica, sans-serif;
+
+    
+}
+li{
+    list-style: none;
+}
+
+.gradient{
+    position: absolute;
+    padding: 1.5rem;
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.9536178107606679) 11%, rgba(255,255,255,0) 46%, rgba(0,0,0,0.9090909090909091) 100%);
+ 
+}
+.page1.page{
+    background:url(images/netflix\ background.jpg) center no-repeat; 
+    height:55vh;
+    background-size: cover;
+    position: relative;
+   
+}
+.header{
+    width: 100%;
+    height: 6%;
+    display: flex;
+    justify-content: space-between;
+   
+   
+}
+
+.headerbtn{
+    width: 50%;
+    max-width: 400px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+    
+   
+
+}
+.headerbtn select{
+    height: 100%;
+    width: 65%;
+    background-color: transparent;
+    border: var(--button-border) 1px solid;
+    outline: none;
+    border-radius: 4px;
+    
+
+}
+option{
+    background-color: var(--button-border);
+}
+.headerbtn>button{
+    height: 100%;
+    width: 30%;
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 4px;
+}
+
+.headerimg{
+    padding: 2px;
+    width: 20%;
+    max-width: 200px;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    
+    
+}
+
+.headerimg>img{
+    width: auto;
+    height: 100%;
+   
+}
+.item2{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+
+.item2>p{
+    margin-bottom: .5rem;
+}
+
+.getstartedbtn{
+    margin-top: .5rem;
+    background-color:var(--button-color);
+    font-size: 1rem;
+    border:none ;
+    border-radius: .2rem;
+    width: 40%;
+    max-width: 200px;
+    height: 40px;
+}  
+
+.emailform{
+    width: 100%;
+    max-width: 800px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+   
+}
+.emailform>h3{
+    width:70%;
+    line-height: 1.3;
+
+}
+
+.emailcontainer{
+    width: 100%;
+    max-width: 500px;
+    height: max-content;
+    position: relative;
+   
+}
+
+
+.email{
+    background-color: white;
+    width: 100%;
+    height:50px;
+    outline: none;
+    color:var(--backgroundcolor);
+    padding: 1rem 1rem 0 1rem ;
+    border: 0px;
+    font-size: 1rem;
+    
+    
+    
+}
+.email:focus+.emaillabel>.labelcontent,
+.email:valid+.emaillabel>.labelcontent{
+    transform: translateY(-15px);
+    font-size: .7rem;
+    
+}
+.email:not(:placeholder-shown).email:not(:focus)+ .emaillabel>.labelcontent{
+    transform: translateY(-15px);
+    font-size: .7rem;
+}
+
+
+.email:not(:placeholder-shown).email:not(:focus).email:invalid,
+.email:not(:placeholder-shown).email:focus.email:invalid{
+
+    border-bottom: 3px solid var(--email-border);
+    
+}
+.email:not(:placeholder-shown).email:not(:focus).email:invalid~.alert::after,
+.email:not(:placeholder-shown).email:focus.email:invalid~.alert::after{
+    left: 0;
+}
+.email:not(:placeholder-shown).email:not(:focus).email:invalid~.alert,
+.email:not(:placeholder-shown).email:focus.email:invalid~.alert{
+    height: 20px;
+}
+.email:placeholder-shown.email:focus~.alert::before{
+    content: "Email is required !";
+    color: var(--email-border);
+    
+}
+
+
+.emaillabel{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+   
+   
+}
+
+
+.alert{
+    margin-top: .2rem;
+    width: 100%;
+    text-align: start;
+    position: relative;
+    font-weight: 600;
+    font-size: .8rem;
+    color: var(--email-border);
+
+    
+ 
+}
+.alert::after{
+    content: "Enter a valid Email";
+    color: var(--email-border);
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top: 2px;
+    left: -2000px;
+    
+}
+
+
+.labelcontent{
+    position:absolute;
+    top: 17px;
+    left: 15px;
+    color: var(--email-font-color);
+    font-weight: 500;
+    
+}
+
+   
+
+
+
+
+
+
+
+
+/*-------page2---------*/
+
+.tvbox{
+    height: 100%;
+    width: 100%;
+    display:flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+   
+
+    
+}
+.tvimage{
+    height: auto;
+    max-width: 100%;
+    position: relative;
+    z-index: 2;
+}
+    
+.tvbox>video{
+    width: 75%;
+    max-width: 470px;
+    height: auto;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+
+  
+   
+}
+
+/*------------page3---------*/
+.phonebox{
+    position: relative;
+    
+}
+.phonebox>img{
+    max-width: 95%;
+    height: auto;
+    z-index: 1;
+
+}
+.downloadbox{
+    padding: .3rem .5rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: .7rem;
+    border: 2px solid var(--pageborder);
+    background-color: var(--backgroundcolor);
+    position: absolute;
+    z-index: 2;
+    overflow: hidden;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    bottom: 30px;
+    width: 60%;
+    height: 19%;
+
+    
+
+}
+.downloadboximg{
+    width: 20%;
+    height: 100%;
+    
+
+}
+.downloadboximg>img{
+    width: auto;
+    height: 100%;
+}
+.boxshotlabel{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.downloadbox p{
+    font-size: .8rem;
+    margin: 0 .5rem;
+    
+}
+.blue{
+    color: rgb(0, 60, 255);
+}
+.boxshotlabel::after{
+    position: absolute;
+   right: 2px;
+    content: "";
+    display: block;
+    width: 20%;
+    height: 100%;
+    background:url(images/download-icon.gif) no-repeat center;
+    background-size: 70%;
+  
+    
+   
+    
+  
+    
+}
+
+/*--------page4--------*/
+
+.page4.page{
+    padding:3rem;
+}
+
+/*--------page5--------*/
+.page5.page{
+    padding: 2rem;
+}
+.page5>img{
+    width: 100%;
+    height: auto;
+}
+
+
+/*--------page6--------*/
+
+.page6.page{
+    padding: 3rem 0;
+}
+.faq{
+    width: 100%;
+}
+.faq-item{
+    width: 100%;
+    height: max-content;
+    margin: 0 0 1rem 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+   
+    
+}
+.question{
+    width: 100%;
+    background-color:var(--pageborder);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    
+}
+
+.question>span::before{
+    content: "+";
+    
+}
+.question:focus.question>span::before{
+    content: "X";
+}
+
+
+
+.openanswer{
+    margin-top: .1rem;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--pageborder);
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    
+    
+}
+
+.openanswer>p{
+    margin-bottom: 1rem;
+}
+
+.emailinput>.email{
+    width: 90%;
+}
+.emailinput>label{
+    margin: 1rem;
+}
+
+
+/*--------------footer-----------*/
+
+.footer{
+    color: var(--pageborder);
+    text-align: left;
+    padding: 3rem 2rem;
+    display: flex;
+   justify-content: center;
+    align-items: center;
+    height: max-content;
+  
+}
+.footercontainer{
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    gap: 30px;
+
+
+}
+.footergrid{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    
+}
+footer p,footer select{
+    color: var(--pageborder);
+}
+
+.footergrid a{
+    text-decoration: none;
+    color: var(--pageborder);
+    
+}
+.footergrid li{
+    font-size: .9rem;
+    margin-bottom: .6rem;
+}
+.footer select{
+    height: 3rem;
+    width: 13rem;
+}
+@media screen and (min-width:552px){
+    .page1.page{
+        height: 80vh;
+        padding: 1rem 2rem;
+    }
+    h1{
+        font-size: 2.5rem;
+        width: 100%;
+    }
+    
+    h3{
+        font-size: 1.5rem;
+    }
+    .page2,.page3,.page4,.page5{
+        padding: 3rem 3rrem;
+    }
+}
+@media screen and (min-width: 740px) {
+    
+    .page1.page h1{
+        width: 60%;
+    }
+    h1{
+        font-size: 3rem;
+        width: 100%;
+    }
+    
+    h3{
+        font-size: 1.5rem;
+    }
+    .emailform>h3{
+        font-size: 1rem;
+        width: 100%;
+        margin-bottom:1rem ;
+    }
+    .emailform{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+       
+        
+    }
+    
+    .getstartedbtn{
+        position: relative;
+        height: 51px;
+        margin: 0;
+    }
+    .page2,.page3,.page4,.page5{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+        
+    }
+
+    .pageheader{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: start;
+        
+    }
+    
+    .page3>.pageheader,.page5>.pageheader{
+        grid-column: 2;
+        grid-row: 1;
+       
+    }
+    .phonebox{
+        grid-column: 1;
+    }
+    .page4 h1{
+        width: 80%;
+        align-self: flex-start;
+        
+    }
+    .page6.page{
+        padding: 4rem 10rem;
+        
+    
+
+    }
+    .page6.page>h1{
+        margin-bottom: 3rem;
+    }
+    .faq-item>button{
+        font-size: 1.8rem;
+        padding: 1.5rem 2rem;
+    }
+    .faq-item>.question{
+        height: 80px;
+    }
+    .faq-item>.answer{
+        font-size: 1.8rem;
+    }
+    .faq-item{
+        margin: .5rem;
+    }
+    
+
+   
+   
+    
+    
+
+
+}
+
+
