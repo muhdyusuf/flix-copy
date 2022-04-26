@@ -270,6 +270,9 @@ option{
     position: relative;
     z-index: 2;
 }
+.tvbox{
+    position:relative;
+}
     
 .tvbox>video{
     width: 75%;
